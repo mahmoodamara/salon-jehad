@@ -28,7 +28,7 @@ router.post('/send', async (req, res) => {
 
   try {
     console.log(code)
-    // await sendWhatsAppMessage(phone, `رمز التحقق الخاص بك هو: ${code}`);
+    await sendWhatsAppMessage(phone, `رمز التحقق الخاص بك هو: ${code}`);
     res.status(200).json({ message: 'تم إرسال رمز التحقق عبر واتساب' });
   } catch (err) {
     console.error('WhatsApp error:', err.message);
