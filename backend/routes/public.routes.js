@@ -18,7 +18,7 @@ router.get('/barbers', async (req, res) => {
 // جلب قائمة الخدمات (اسم وسعر فقط)
 router.get('/services', async (req, res) => {
   try {
-    const services = await Service.find({}, 'name price');
+    const services = await Service.find({}, 'name price duration');
     res.json(services);
   } catch (err) {
     res.status(500).json({ message: 'فشل في جلب الخدمات' });
