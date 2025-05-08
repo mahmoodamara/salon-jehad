@@ -1,0 +1,29 @@
+/* استيراد خط Cairo من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+/* أوامر Tailwind الأساسية */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* تخصيصات إضافية */
+body {
+  @apply font-cairo bg-gray-900 text-white leading-relaxed;
+  direction: rtl;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-gold font-bold;
+}
+
+button {
+  @apply transition duration-300 ease-in-out;
+}
+
+img {
+  @apply rounded shadow;
+}
