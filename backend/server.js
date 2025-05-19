@@ -32,7 +32,6 @@ mongoose
     console.error("❌ MongoDB connection error:", err.message);
   });
 
-
 // داخل server.js
 const verifyRoutes = require("./routes/verify");
 app.use("/api/verify", verifyRoutes);
@@ -54,5 +53,6 @@ app.use("/api/admin/appointments", adminAppointmentsRoutes);
 
 app.use("/api/public", require("./routes/public.routes"));
 
-const startCronJobs = require("./cron/startCronJobs");
-startCronJobs();
+// const startCronJobs = require("./cron/startCronJobs");
+// startCronJobs();
+

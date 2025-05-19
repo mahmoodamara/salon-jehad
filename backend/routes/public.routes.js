@@ -31,7 +31,7 @@ router.get('/barbers/:id/availability', async (req, res) => {
     const barber = await Barber.findById(req.params.id);
     if (!barber) return res.status(404).json({ message: 'الحلاق غير موجود' });
 
-    res.json({
+    res.json({  
       workSchedule: barber.workSchedule,
       vacations: barber.vacations
     });
